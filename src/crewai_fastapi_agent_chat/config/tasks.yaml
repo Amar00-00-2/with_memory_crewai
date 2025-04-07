@@ -1,0 +1,21 @@
+router_task:
+  description: >
+    Analyze the question '{question}'.
+    Based on the keywords, decide if it should be routed to 'rag', 'email', 'WhatsApp'.
+    The input of this router agent is question '{question}',User name '{username}' collection ID '{collection_id}',Chat history '{chat_history}',Prompt '{prompt}',Vector db '{vector_db}',Product id '{product_id}',Product name '{product_name}'.
+    
+  expected_output: >
+    Do not provide any other preamble or explanation. Just return the output as it is.
+  agent: router_agent
+
+
+# router_task:
+#   description: >
+#     Analyze the question '{question}'.
+#     Based on the keywords, decide if it should be routed to 'rag', 'email', 'WhatsApp'.
+#     For email and WhatsApp requests, verify that the document type is specified. If not, ask the user to specify the document type before proceeding.
+#     The input of this router agent is question '{question}', User name '{username}' collection ID '{collection_id}', Chat history '{chat_history}', Prompt '{prompt}', Vector db '{vector_db}', Product id '{product_id}', Product name '{product_name}'.
+    
+#   expected_output: >
+#     Do not provide any other preamble or explanation. Just return the output as it is.
+#   agent: router_agent
